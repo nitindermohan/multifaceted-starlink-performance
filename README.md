@@ -10,8 +10,8 @@ In recent years, Low-Earth Orbit (LEO) mega-constellations have emerged as a pro
 ## 📝 Reference 
 ```
 @inproceedings{multifacetedStarlink-www24,
-	title={A multifaceted look at starlink performance},
-  author={Mohan, Nitinder and Ferguson, Andrew and Cech, Hendrik and Renatin, Prakita Rayyan and Bose, Rohan and Marina, Mahesh and Ott, J{\"o}rg},
+	title={{A Multifaceted Look at Starlink Performance}},
+  	author={Mohan, Nitinder and Ferguson, Andrew and Cech, Hendrik and Renatin, Prakita Rayyan and Bose, Rohan and Marina, Mahesh and Ott, J{\"o}rg},
 	year = {2024}, 
 	publisher = {Association for Computing Machinery}, 
 	address = {New York, NY, USA}, 
