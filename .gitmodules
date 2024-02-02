@@ -1,0 +1,4 @@
+[submodule "fig-11-gaming/decaf"]
+	path = fig-11-gaming/decaf
+	url = https://github.com/hendrikcech/decaf.git
+	branch = webconf-2024
