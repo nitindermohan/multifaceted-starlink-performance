@@ -3,6 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 import numpy as np
+from descartes import PolygonPatch
+from unidecode import unidecode
+from matplotlib.patches import Patch
 cols = plt.get_cmap("tab10").colors
 
 def plot_cdf(df, cities, column, xlabel,
