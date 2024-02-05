@@ -27,4 +27,4 @@ pip install -r requirements.txt
 DATA_PATH=/path/to/the/fetched/data jupyter nbconvert --to=html --execute mlab_concise.ipynb
 ```
 
-Now, the figures are generated in the `./figures` folder.
+Now, the figures are generated in the `./figures` folder and you can also see the rendered notebook in `mlab_concise.html`.
