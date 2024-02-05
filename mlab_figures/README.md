@@ -17,12 +17,14 @@ With the script found in this folder, the following figures can be generated:
 
 ## Quick-Start
 
+Before running the script, make sure you fetch the data and set the `DATA_PATH` variable in the following accordingly.
+
 ```
 cd /path/to/this/folder
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-jupyter nbconvert --to=html --execute mlab_concise.ipynb
+DATA_PATH=/path/to/the/fetched/data jupyter nbconvert --to=html --execute mlab_concise.ipynb
 ```
 
 Now, the figures are generated in the `./figures` folder.
