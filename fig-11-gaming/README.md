@@ -8,40 +8,44 @@ We applied small changes to their analysis script and published our changes at [
 
 # Setup
 ## Get the data
-rsync gaming data from dataset to /data.
-This dataset already contains the artifacts that the decaf analysis scripts produce.
-To regenerate these, follow the instructions included in the decaf repository.
+Fetch the gaming dataset to /data.
+This dataset contains both the raw data captured during the experiment and the artifacts created by the DECAF analysis scripts.
 
-The data was recorded
+The dataset contains multiple measurement runs, each 30 minutes long, over different links: Ethernet, Starlink, and cellular 5G. Each folder has the following structure.
 ``` sh
 crew_fr_30_ethernet1
-├── bot_log.csv
-├── cropped/
-├── current_rtt.json
+# Captured at measurement time
+├── bot_log.csv      # timestamped game bot actions performed during the measurement
 ├── dump_for_ip.pcapng
-├── dump.pcapng
-├── extractedFrames
-├── frames
+├── dump.pcapng      # full packet trace from measurement run
+├── ips.json # detected client and server IPs
+├── rtcStatsCollector.txt # written by Chrome during measurement
+├── video_1684482973.512462.mkv
+# Created by data_processing.py in post-processing
+├── current_rtt.json
 ├── frame_timestamps.json
-├── ips.json
 ├── packet_loss_stats.json
 ├── parsed_rtcStatsCollector.json
 ├── parsed_videoReceiveStream.json
 ├── predicted_files.json
-├── rtcStatsCollector.txt
-├── uncropped
-├── video_1684482973.512462.mkv
 ├── video_cropped.mkv
 ├── videoReceiveStream.txt
-└── vrs_summary_stats.json
+├── vrs_summary_stats.json
+├── cropped/
+├── extractedFrames/
+├── frames/
+└── uncropped/
+
 ```
 
-## decaf Artifact Processing: TODO
+### 0. Optional: DECAF Artifact Processing
 Clone our adapted decaf version:
 
 ``` sh
 git submodule update --init --recursive
 ```
 
-## Plotting
-To recreate the plots and data that we reference in our paper, run `bash plot.sh`.
+Please follow the setup instructions in `decaf/data_processing/README.md` and finally run `decaf/data_processing/data_processing.py`.
+
+### 1. Run our Analysis and Plotting Scripts
+To calculate the advanced metrics and to recreate Fig. 11 from our paper, run `bash plot.sh`.
