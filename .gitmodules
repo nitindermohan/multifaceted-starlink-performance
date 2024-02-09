@@ -2,3 +2,6 @@
 	path = fig-11-gaming/decaf
 	url = https://github.com/hendrikcech/decaf.git
 	branch = webconf-2024
+[submodule "fig-10-zoom/zoom-analysis"]
+	path = fig-10-zoom/zoom-analysis
+	url = git@github.com:hendrikcech/zoom-analysis.git
