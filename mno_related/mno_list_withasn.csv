@@ -1,93 +1,93 @@
-CountryName,MobileOperator,ASN
-Netherlands,KPN,AS1136
-Netherlands,T-Mobile,AS50266
-Netherlands,Tele2,AS13127
-Dominican Republic,Claro,AS6400
-Dominican Republic,Altice Dominicana,AS28118
-Dominican Republic,Tricom,AS27887
-Canada,Bell,AS577
-Canada,Rogers,AS812
-Canada,Telus,AS852
-Nigeria,MTN,AS29465
-Nigeria,Airtel,AS36873
-Nigeria,Glo,AS328309
-Austria,A1 Telekom Austria,AS8447
-Austria,T-Mobile Austria,AS8412
-Austria,Magenta Telekom,AS25255
-Norway,Telenor,AS2119
-Norway,TELIA NORGE AS,AS12929
-Norway,NextGenTel AS,AS15659
-Peru,Claro,AS12252
-Peru,Movistar,AS6147
-Peru,Entel,AS21575
-Belgium,Proximus,AS5432
-Belgium,Orange,AS47377
-Belgium,Telenet,AS6848
-France,Orange,AS3215
-France,Bouygues Telecom,AS5410
-France,SFR,AS15557
-United Kingdom,EE,AS12576
-United Kingdom,O2,AS5089
-United Kingdom,Vodafone,AS5378
-Saint Barthélemy,Digicel,AS3215
-United States,Verizon,AS22394
-United States,AT&T Mobility LLC,AS20057
-United States,T-Mobile,AS21928
-Brazil,Vivo,AS18881
-Brazil,TIM,AS26615
-Brazil,Claro,AS28573
-Ireland,Vodafone,AS15502
-Ireland,Eir,AS5466
-Ireland,Three,AS13280
-New Zealand,Spark,AS4771
-New Zealand,Vodafone,AS9500
-New Zealand,2degrees,AS9790
-Italy,TIM,AS3269
-Italy,Vodafone,AS30722
-Italy,Wind Tre,AS1267
-Mexico,Telcel,AS28403
-Mexico,AT&T,AS28469
-Australia,Optus,AS4804
-Australia,Telstra,AS1221
-Australia,Vodafone,AS133612
-Philippines,Smart Communications,AS10139
-Philippines,Globe Telecom,AS132199
-Chile,Entel,AS27651
-Chile,Claro,AS27995
-Chile,Movistar,AS7418
-Germany,Deutsche Telekom,AS3320
-Germany,Vodafone,AS3209
-Germany,O2,AS6805
-Martinique,Digicel,AS48252
-Portugal,NOS,AS2860
-Portugal,MEO,AS15525
-Portugal,Vodafone,AS12353
-Puerto Rico,Claro,AS10396
-Puerto Rico,Liberty,AS14638
-Puerto Rico,T-Mobile,AS21928
-Colombia,Claro,AS10620
-Colombia,Tigo Colombia/EPM Telecomunicaciones,AS13489
-Colombia,Colombia Móvil,AS27831
-Spain,Movistar or Telefonica de Espana,AS3352
-Spain,Orange,AS12479
-Spain,Vodafone,AS12430
-Japan,NTT Docomo,AS9605
-Japan,KDDI,AS2516
-Japan,SoftBank,AS17676
-Czechia,T-Mobile,AS5588
-Czechia,Vodafone Czech Republic,AS16019
-Czechia,O2 Czech Republic,AS5610
-Greece,Cosmote,AS29247
-Greece,Vodafone Greece,AS3329
-Greece,Forthnet GR,AS1241
-Guadeloupe,Dauphin Telecom,AS33392
-Kenya,Safaricom,AS33771
-Kenya,Airtel Kenya,AS36926
-Kenya,Telkom Kenya,AS12455
-Mozambique,mCel,AS36945
-Mozambique,Movitel,AS37342
-Poland,Orange Polska,AS5617
-Poland,T-Mobile Poland,AS12912
-Sweden,Telia Company,AS3301
-Sweden,Tele2 Sweden,AS1257
-Sweden,Telenor Sweden,AS8642
+CountryName,MobileOperator,ASN,asrank
+Australia,Telstra,AS1221,55
+Australia,Optus,AS4804,4540
+Australia,Vodafone,AS133612,7298
+Austria,A1 Telekom Austria,AS8447,160
+Austria,Magenta Telekom,AS25255,522
+Austria,T-Mobile Austria,AS8412,555
+Belgium,Proximus,AS5432,980
+Belgium,Telenet,AS6848,1295
+Belgium,Orange,AS47377,2859
+Brazil,TIM,AS26615,79
+Brazil,Claro,AS28573,7228
+Brazil,Vivo,AS18881,7243
+Canada,Bell,AS577,95
+Canada,Telus,AS852,200
+Canada,Rogers,AS812,240
+Chile,Movistar,AS7418,5474
+Chile,Claro,AS27995,7337
+Chile,Entel,AS27651,11937
+Colombia,Tigo Colombia/EPM Telecomunicaciones,AS13489,1382
+Colombia,Claro,AS10620,11863
+Colombia,Colombia Móvil,AS27831,11867
+Czechia,Vodafone Czech Republic,AS16019,268
+Czechia,O2 Czech Republic,AS5610,830
+Czechia,T-Mobile,AS5588,3174
+Dominican Republic,Claro,AS6400,2463
+Dominican Republic,Altice Dominicana,AS28118,3123
+Dominican Republic,Tricom,AS27887,4683
+France,Orange,AS3215,213
+France,SFR,AS15557,438
+France,Bouygues Telecom,AS5410,1426
+Germany,Deutsche Telekom,AS3320,18
+Germany,Vodafone,AS3209,237
+Germany,O2,AS6805,1923
+Greece,Vodafone Greece,AS3329,739
+Greece,Forthnet GR,AS1241,932
+Greece,Cosmote,AS29247,12082
+Guadeloupe,Dauphin Telecom,AS33392,6364
+Ireland,Eir,AS5466,1755
+Ireland,Vodafone,AS15502,3472
+Ireland,Three,AS13280,7415
+Italy,TIM,AS3269,239
+Italy,Wind Tre,AS1267,445
+Italy,Vodafone,AS30722,1042
+Japan,KDDI,AS2516,123
+Japan,SoftBank,AS17676,147
+Japan,NTT Docomo,AS9605,11855
+Kenya,Safaricom,AS33771,841
+Kenya,Airtel Kenya,AS36926,981
+Kenya,Telkom Kenya,AS12455,3956
+Martinique,Digicel,AS48252,3510
+Mexico,AT&T,AS28469,5591
+Mexico,Telcel,AS28403,15664
+Mozambique,Movitel,AS37342,12384
+Mozambique,mCel,AS36945,21793
+Netherlands,KPN,AS1136,768
+Netherlands,T-Mobile,AS50266,1292
+Netherlands,Tele2,AS13127,1434
+New Zealand,2degrees,AS9790,263
+New Zealand,Vodafone,AS9500,1936
+New Zealand,Spark,AS4771,3466
+Nigeria,MTN,AS29465,933
+Nigeria,Airtel,AS36873,1190
+Nigeria,Glo,AS328309,23833
+Norway,Telenor,AS2119,256
+Norway,NextGenTel AS,AS15659,4600
+Norway,TELIA NORGE AS,AS12929,7373
+Peru,Movistar,AS6147,1834
+Peru,Claro,AS12252,2039
+Peru,Entel,AS21575,2047
+Philippines,Smart Communications,AS10139,7416
+Philippines,Globe Telecom,AS132199,12034
+Poland,Orange Polska,AS5617,164
+Poland,T-Mobile Poland,AS12912,180
+Portugal,NOS,AS2860,801
+Portugal,MEO,AS15525,1356
+Portugal,Vodafone,AS12353,1601
+Puerto Rico,Claro,AS10396,1131
+Puerto Rico,Liberty,AS14638,1308
+Puerto Rico,T-Mobile,AS21928,5470
+Saint Barthélemy,Digicel,AS3215,213
+Spain,Vodafone,AS12430,372
+Spain,Orange,AS12479,381
+Spain,Movistar or Telefonica de Espana,AS3352,403
+Sweden,Tele2 Sweden,AS1257,195
+Sweden,Telia Company,AS3301,390
+Sweden,Telenor Sweden,AS8642,65739
+United Kingdom,O2,AS5089,518
+United Kingdom,Vodafone,AS5378,5476
+United Kingdom,EE,AS12576,11838
+United States,T-Mobile,AS21928,5470
+United States,AT&T Mobility LLC,AS20057,7244
+United States,Verizon,AS22394,12570
