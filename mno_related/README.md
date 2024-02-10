@@ -6,7 +6,7 @@ The `mno_list_withasn.csv` has been curated to contain the top mobile network op
 
 To access the asrank data, we use the [AS Rank v2.1 GraphQL API](https://api.asrank.caida.org/dev/docs). First, we manually curate the list of mobile network operators and their respective autonomous system numbers, and then use the API. The code to generate the table is as follows:
 
-```
+```python
 import json
 import requests
 
