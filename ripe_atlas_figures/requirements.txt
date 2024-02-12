@@ -1,0 +1,11 @@
+matplotlib==3.7.2
+numpy==1.25.2
+pandas==2.0.3
+tqdm==4.66.1
+pyasn==1.6.1
+geopandas==0.14.0
+Cartopy==0.22.0
+scipy==1.11.2
+jupyter==1.0.0
+haversine==2.8.0
+mapclassify==2.6.1
