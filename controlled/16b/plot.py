@@ -1,18 +1,8 @@
-#!/usr/bin/python3
-
 import sys
 import json
 import matplotlib.pyplot as plt
 import sqlite3
 import pandas
-
-# Setting global font to "CMU Sans Serif"
-from matplotlib import rcParams
-rcParams["font.family"] = "CMU Sans Serif"
-rcParams['svg.fonttype'] = 'none'
-rcParams.update({"font.size": 10})
-# This will compile plots to be Latex compatible
-#plt.rc('text', usetex=True)
 
 OPTIMISATION_START=0
 
@@ -61,5 +51,4 @@ axs[1].set_xlabel("Experiment time [s]")
 axs[1].set_xticks(range(0,195,30))
 fig.text(0,0.5, "Throughput [Mbps]", ha="center", va="center", rotation=90)
 
-fig.tight_layout()
 plt.savefig("throughput.svg", bbox_inches="tight", pad_inches=0)

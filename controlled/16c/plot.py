@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 import matplotlib.pyplot as plt
 import sys
 import os
@@ -8,13 +6,6 @@ import json
 import datetime
 import sqlite3
 import numpy
-
-# Setting global font to "CMU Sans Serif"
-from matplotlib import rcParams
-rcParams["font.family"] = "CMU Sans Serif"
-rcParams.update({"font.size": 10})
-# This will compile plots to be Latex compatible
-plt.rc('text', usetex=True)
 
 # do we show a raw plot or a reduced plot
 REDUCED=False
@@ -127,5 +118,4 @@ axs[1].set_yticks([0, 0.2, 0.4])
 
 # show the plot
 plt.legend(fontsize=8, frameon=False)
-fig.tight_layout()
-plt.savefig("fov.pdf", bbox_inches="tight", pad_inches=0, dpi=600)
+plt.savefig("fov.svg", bbox_inches="tight", pad_inches=0, dpi=600)

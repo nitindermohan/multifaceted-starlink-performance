@@ -1,17 +1,7 @@
-#!/usr/bin/python3
-
 import matplotlib.pyplot as plt
 import sys
 import sqlite3
 import pandas
-
-# Setting global font to "CMU Sans Serif"
-from matplotlib import rcParams
-rcParams["font.family"] = "CMU Sans Serif"
-rcParams.update({"font.size": 10})
-rcParams['svg.fonttype'] = 'none'
-# This will compile plots to be Latex compatible
-plt.rc('text', usetex=True)
 
 # unix epoch for the starting time for the duration
 START_TIME=1681733787 # 17 April 2023 12:16:27
@@ -107,7 +97,6 @@ def plot_data(dish_a, dish_b):
         optimisation_interval += 15
 
     # show the plot
-    fig.tight_layout()
     plt.savefig("rtt.svg", bbox_inches="tight", pad_inches=0, dpi=600)
 
 
