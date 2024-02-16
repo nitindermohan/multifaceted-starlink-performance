@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from matplotlib import rcParams
 from matplotlib.backends.backend_pdf import PdfPages
+import shutil
 
 def plot_optimization_interval(ax, start, end):
     res = []
@@ -63,7 +64,7 @@ def main():
     plt.set_cmap("tab10")
     rcParams["font.family"] = "CMU Sans Serif"
     rcParams["font.size"] = 10.0
-    plt.rc('text', usetex=True)
+    plt.rc('text', usetex=True if shutil.which('latex') else False)
 
 
     fig, axes = plt.subplots(figsize=(4, 1.5), ncols=len(args.dirs), sharey=True)

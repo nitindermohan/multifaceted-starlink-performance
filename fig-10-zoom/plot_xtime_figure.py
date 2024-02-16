@@ -9,6 +9,7 @@ from matplotlib.backends.backend_pdf import PdfPages
 import os.path
 import argparse
 import sys
+import shutil
 
 import zoom_parser as zp
 
@@ -158,7 +159,7 @@ def main():
     plt.set_cmap("tab10")
     rcParams["font.family"] = "CMU Sans Serif"
     rcParams["font.size"] = 10.0
-    plt.rc('text', usetex=True)
+    plt.rc('text', usetex=True if shutil.which('latex') else False)
 
     if args.b:
         breakpoint()

@@ -12,6 +12,7 @@ from matplotlib.backends.backend_pdf import PdfPages
 import json
 import multiprocessing
 import sys
+import shutil
 
 import zoom_parser as zp
 
@@ -206,14 +207,13 @@ def main():
             json.dump(bxp_stl, f, indent=2, cls=NpEncoder)
         with open(filepath + "_ter" + ext, "w") as f:
             json.dump(bxp_ter, f, indent=2, cls=NpEncoder)
-        return
 
     print(f"Plotting...")
 
     plt.set_cmap("tab10")
     rcParams["font.family"] = "CMU Sans Serif"
     rcParams["font.size"] = 9.0
-    plt.rc('text', usetex=True)
+    plt.rc('text', usetex=True if shutil.which('latex') else False)
 
     fig, axes = plt.subplots(figsize=(4, 1.5), ncols=3)
 
