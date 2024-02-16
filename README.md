@@ -19,12 +19,51 @@ In recent years, Low-Earth Orbit (LEO) mega-constellations have emerged as a pro
 	series = {WWW '24}
 }
 ```
-## 🛠️ Repository Structure
-> TBA
 
 ## 💾 Dataset
 
-The data necessary for the plots needs to be downloaded before starting and is available at [mediaTUM]() with instructions on how to set it up. 
+The data necessary for the plots needs to be downloaded before starting and is available at [mediaTUM](https://mediatum.ub.tum.de/1734703) with instructions on how to set it up. 
+
 
 ## 📊 Reproducibility Instructions
-> TBA
+All plots were created with Python3.10. We recommend following our instructions to create a virtual Python environment with the package versions that we used.
+
+```
+git clone https://github.com/nitindermohan/multifaceted-starlink-performance.git
+cd multifaceted-starlink-performance
+python3.10 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+The dataset contains both raw data and processed artifacts. To only download the data required for plotting, you may use the following command.
+
+``` sh
+export DATA_PATH="$(pwd)/multifaceted-dataset"
+# will follow when dataset is public
+rsync ... "$DATA_PATH/"
+
+tree -L 2 "$DATA_PATH"
+/u/home/me/multifaceted-dataset/
+└── data
+    ├── mlab
+    └── zoom
+```
+
+All plots can be created with the following commands.
+``` sh
+# Remember that envvar DATA_PATH needs to point to the cloned dataset (see the previous step)
+
+# RIPE Atlas plots
+jupyter nbconvert --to=html --execute ripe_atlas_figures/ripe_atlas_repr.ipynb
+
+# MLab plots
+jupyter nbconvert --to=html --execute mlab_figures/mlab_concise.ipynb
+
+# Zoom plots
+bash fig-10-zoom/plot.sh
+
+# Cloud gaming plots
+bash fig-11-gaming/plot.sh
+```
+
