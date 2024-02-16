@@ -46,6 +46,7 @@ rsync ... "$DATA_PATH/"
 tree -L 2 "$DATA_PATH"
 /u/home/me/multifaceted-dataset/
 └── data
+    ├── controlled
     ├── mlab
     └── zoom
 ```
@@ -65,5 +66,11 @@ bash fig-10-zoom/plot.sh
 
 # Cloud gaming plots
 bash fig-11-gaming/plot.sh
+
+# Controlled experiments (Figure 16)
+cd controlled/
+cd 16a && ./generate_fig_16a.sh      # Generate Figure 16a
+cd ../16b && ./generate_fig_16b.sh   # Generate Figure 16b
+cd ../16c && ./generate_fig_16c.sh   # Generate Figure 16c
 ```
 
