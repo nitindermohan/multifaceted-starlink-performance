@@ -23,4 +23,4 @@ mv irtt.db dish-1.db
 mv irtt.db dish-2.db
 
 # Create the plot
-./plot.py
+python ./plot.py

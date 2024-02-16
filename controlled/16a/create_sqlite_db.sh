@@ -12,4 +12,4 @@ else
   sqlite3 irtt.db '.read schema.sql'
 fi
 
-unzstd -c $1 | jq -c --stream 'select(.[1] and ((.[0][2] == "timestamps" and .[0][3] == "client" and .[0][4] == "send" and .[0][5] == "wall") or (.[0][2] == "delay"))) | del(.[0][0:-1])' | ./parse_irtt_json.py | sqlite3 -csv ./irtt.db ".separator ','" ".import '|cat -' irtt"
+unzstd -c $1 | jq -c --stream 'select(.[1] and ((.[0][2] == "timestamps" and .[0][3] == "client" and .[0][4] == "send" and .[0][5] == "wall") or (.[0][2] == "delay"))) | del(.[0][0:-1])' | python ./parse_irtt_json.py | sqlite3 -csv ./irtt.db ".separator ','" ".import '|cat -' irtt"

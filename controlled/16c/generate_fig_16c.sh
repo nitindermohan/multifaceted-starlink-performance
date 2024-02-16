@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Create the plot
-./plot.py $DATA_PATH
+python ./plot.py $DATA_PATH
