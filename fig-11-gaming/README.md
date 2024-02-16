@@ -7,21 +7,20 @@ We applied small changes to their analysis script and published our changes at [
 [0] Hassan Iqbal, Ayesha Khalid, and Muhammad Shahzad. 2021. Dissecting Cloud Gaming Performance with DECAF. Proc. ACM Meas. Anal. Comput. Syst. 5, 3, Article 31 (December 2021), 27 pages. https://doi.org/10.1145/3491043
 
 # Setup
-## Get the data
-Fetch the gaming dataset to /data.
-This dataset contains both the raw data captured during the experiment and the artifacts created by the DECAF analysis scripts.
+## Dataset
+Please fetch the gaming dataset and point env var `DATA_PATH` to it. This dataset contains both the raw data captured during the experiment and the artifacts created by the DECAF analysis scripts.
 
 The dataset contains multiple measurement runs, each 30 minutes long, over different links: Ethernet, Starlink, and cellular 5G. Each folder has the following structure.
 ``` sh
 crew_fr_30_ethernet1
-# Captured at measurement time
+--- Captured at measurement time
 ├── bot_log.csv      # timestamped game bot actions performed during the measurement
 ├── dump_for_ip.pcapng
 ├── dump.pcapng      # full packet trace from measurement run
 ├── ips.json # detected client and server IPs
 ├── rtcStatsCollector.txt # written by Chrome during measurement
 ├── video_1684482973.512462.mkv
-# Created by data_processing.py in post-processing
+---- Created by data_processing.py in post-processing
 ├── current_rtt.json
 ├── frame_timestamps.json
 ├── packet_loss_stats.json
@@ -30,12 +29,7 @@ crew_fr_30_ethernet1
 ├── predicted_files.json
 ├── video_cropped.mkv
 ├── videoReceiveStream.txt
-├── vrs_summary_stats.json
-├── cropped/
-├── extractedFrames/
-├── frames/
-└── uncropped/
-
+└─── vrs_summary_stats.json
 ```
 
 ### 0. Optional: DECAF Artifact Processing
@@ -45,7 +39,7 @@ Clone our adapted decaf version:
 git submodule update --init --recursive
 ```
 
-Please follow the setup instructions in `decaf/data_processing/README.md` and finally run `decaf/data_processing/data_processing.py`.
+Please follow the setup instructions in `decaf/data_processing/README.md` and run `decaf/data_processing/data_processing.py`. Afterwards, compute our custom statistics with `bash preprocessing.sh`.
 
 ### 1. Run our Analysis and Plotting Scripts
-To calculate the advanced metrics and to recreate Fig. 11 from our paper, run `bash plot.sh`.
+To recreate Fig. 11 from our paper, run `bash plot.sh`.
