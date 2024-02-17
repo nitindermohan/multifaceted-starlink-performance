@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd "$(dirname -- "$0")"
+
 # Check for required installed programmes
 if ! which unzstd; then
   echo 'unzstd command not found on $PATH. Aborting'

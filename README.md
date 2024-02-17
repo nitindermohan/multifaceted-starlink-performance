@@ -36,6 +36,8 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+To plot Figure 16, you need to have `unzstd`, `jq`, and `sqlite3` available in your `$PATH`.
+
 The dataset contains both raw data and processed artifacts. To only download the data required for plotting, you may use the following command.
 
 ``` sh
@@ -68,9 +70,8 @@ bash fig-10-zoom/plot.sh
 bash fig-11-gaming/plot.sh
 
 # Controlled experiments (Figure 16)
-cd controlled/
-cd 16a && ./generate_fig_16a.sh      # Generate Figure 16a
-cd ../16b && ./generate_fig_16b.sh   # Generate Figure 16b
-cd ../16c && ./generate_fig_16c.sh   # Generate Figure 16c
+bash 16a/generate_fig_16a.sh    # Generate Figure 16a
+bash 16b/generate_fig_16b.sh   # Generate Figure 16b
+bash 16c/generate_fig_16c.sh   # Generate Figure 16c
 ```
 
