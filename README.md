@@ -70,8 +70,8 @@ bash fig-10-zoom/plot.sh
 bash fig-11-gaming/plot.sh
 
 # Controlled experiments (Figure 16)
-bash 16a/generate_fig_16a.sh    # Generate Figure 16a
-bash 16b/generate_fig_16b.sh   # Generate Figure 16b
-bash 16c/generate_fig_16c.sh   # Generate Figure 16c
+bash controlled/16a/generate_fig_16a.sh    # Generate Figure 16a
+bash controlled/16b/generate_fig_16b.sh   # Generate Figure 16b
+bash controlled/16c/generate_fig_16c.sh   # Generate Figure 16c
 ```
 
