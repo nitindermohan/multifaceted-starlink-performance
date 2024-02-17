@@ -45,32 +45,43 @@ export DATA_PATH="$(pwd)/multifaceted-dataset"
 # will follow when dataset is public
 rsync ... "$DATA_PATH/"
 
-tree -L 2 "$DATA_PATH"
-/u/home/me/multifaceted-dataset/
-└── data
-    ├── controlled
-    ├── mlab
-    └── zoom
+$ tree -L 2 "$DATA_PATH"
+/multifaceted-dataset/
+.
+├── atlas
+├── atlas.sha512
+├── controlled
+├── controlled.sha512
+├── gaming
+├── gaming.sha512
+├── mlab
+├── mlab.sha512
+├── README.md
+├── README.md.sha512
+├── zoom
+└── zoom.sha512
 ```
 
 All plots can be created with the following commands.
 ``` sh
 # Remember that envvar DATA_PATH needs to point to the cloned dataset (see the previous step)
+export DATA_PATH="TODO"
+export RESULT_PATH="$(pwd)/results"
 
 # RIPE Atlas plots
-jupyter nbconvert --to=html --execute ripe_atlas_figures/ripe_atlas_repr.ipynb
+jupyter nbconvert --to=html --output-dir="$RESULT_PATH" --execute ripe_atlas_figures/ripe_atlas_repr.ipynb
 
 # MLab plots
-jupyter nbconvert --to=html --execute mlab_figures/mlab_concise.ipynb
+jupyter nbconvert --to=html --output-dir="$RESULT_PATH" --execute mlab_figures/mlab_concise.ipynb
 
 # Zoom plots
-bash fig-10-zoom/plot.sh
+bash zoom/plot.sh
 
 # Cloud gaming plots
-bash fig-11-gaming/plot.sh
+bash gaming/plot.sh
 
 # Controlled experiments (Figure 16)
-bash controlled/16a/generate_fig_16a.sh    # Generate Figure 16a
+bash controlled/16a/generate_fig_16a.sh   # Generate Figure 16a
 bash controlled/16b/generate_fig_16b.sh   # Generate Figure 16b
 bash controlled/16c/generate_fig_16c.sh   # Generate Figure 16c
 ```
