@@ -1,5 +1,5 @@
 [submodule "fig-11-gaming/decaf"]
-	path = fig-11-gaming/decaf
+	path = gaming/decaf
 	url = https://github.com/hendrikcech/decaf.git
 	branch = webconf-2024
 [submodule "fig-10-zoom/zoom-analysis"]
