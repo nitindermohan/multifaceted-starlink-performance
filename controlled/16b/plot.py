@@ -53,4 +53,5 @@ axs[1].set_xlabel("Experiment time [s]")
 axs[1].set_xticks(range(0,195,30))
 fig.text(0,0.5, "Throughput [Mbps]", ha="center", va="center", rotation=90)
 
+plt.savefig("throughput.pdf", bbox_inches="tight", pad_inches=0)
 plt.savefig("throughput.svg", bbox_inches="tight", pad_inches=0)

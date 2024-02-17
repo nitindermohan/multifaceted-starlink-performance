@@ -99,6 +99,7 @@ def plot_data(dish_a, dish_b):
         optimisation_interval += 15
 
     # show the plot
+    plt.savefig("rtt.pdf", bbox_inches="tight", pad_inches=0, dpi=600)
     plt.savefig("rtt.svg", bbox_inches="tight", pad_inches=0, dpi=600)
 
 

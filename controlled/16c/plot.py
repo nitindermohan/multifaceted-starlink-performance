@@ -120,4 +120,5 @@ axs[1].set_yticks([0, 0.2, 0.4])
 
 # show the plot
 plt.legend(fontsize=8, frameon=False)
+plt.savefig("fov.pdf", bbox_inches="tight", pad_inches=0, dpi=600)
 plt.savefig("fov.svg", bbox_inches="tight", pad_inches=0, dpi=600)
