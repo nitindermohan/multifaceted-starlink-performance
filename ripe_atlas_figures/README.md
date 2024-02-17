@@ -18,7 +18,14 @@ With the script found in this folder, the following figures can be generated:
 
 Fetch the data and set the `DATA_PATH` environment variable to the folder where the data is downloaded. The Ripe Atlas data must be in a subfolder (./atlas/ripe_Atlas_repr) of this data folder.
 
-The execute the below commands in the terminal
+Please Make sure the data is in uncompressed version. Else execute the below command at the 'data' folder level:
+
+```
+cd ./atlas/ripe_atlas_repr
+unzip '*.zip'
+```
+
+Then execute the below commands in the terminal:
 
 ```
 cd /path/to/this/folder
