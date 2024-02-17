@@ -39,7 +39,7 @@ Clone our adapted decaf version:
 git submodule update --init --recursive
 ```
 
-Please follow the setup instructions in `decaf/data_processing/README.md` and run `decaf/data_processing/data_processing.py`. Afterwards, compute our custom statistics with `bash preprocessing.sh`.
+Please follow the setup instructions in `decaf/data_processing/README.md` and run `decaf/data_processing/data_processing.py`. Afterwards, compute our custom statistics with `bash preprocessing.sh` with `DATA_PATH` and `RESULT_PATH` being set.
 
 ### 1. Run our Analysis and Plotting Scripts
-To recreate Fig. 11 from our paper, run `bash plot.sh`.
+Set the environment variables `DATA_PATH` and `RESULT_PATH`. To recreate Fig. 11 from our paper, run `bash plot.sh`.

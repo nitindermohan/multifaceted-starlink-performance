@@ -1,13 +1,16 @@
 #!/usr/bin/env sh
 
+if [ -z "$DATA_PATH" ] || [ -z "$RESULT_PATH" ]; then echo "DATA_PATH and RESULT_PATH need to be set"
+    exit 1
+fi
+RES="$RESULT_PATH/gaming"
+mkdir -p "$RES"
+
 set -xeu
 
 cd "$(dirname -- "$0")"
 
 DATA="$DATA_PATH/gaming"
-RES="result"
-
-mkdir -p "$RES"
 
 for c in ethernet starlink cellular; do
     python compute_overall_metrics.py "$DATA"/crew*${c}* --method overall    --save "$RES/gaming_metrics_${c}.json"
