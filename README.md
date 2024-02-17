@@ -42,7 +42,7 @@ The dataset contains both raw data and processed artifacts. To only download the
 
 ``` sh
 export DATA_PATH="$(pwd)/multifaceted-dataset"
-# will follow when dataset is public
+# TODO: will follow when dataset is public
 rsync ... "$DATA_PATH/"
 
 $ tree -L 2 "$DATA_PATH"
@@ -62,8 +62,9 @@ $ tree -L 2 "$DATA_PATH"
 └── zoom.sha512
 ```
 
-All plots can be created with the following commands.
+All plots can be created with `./plot_all.sh`. Make sure to properly configure `DATA_PATH` and `RESULT_PATH`.
 ``` sh
+#
 # Remember that envvar DATA_PATH needs to point to the cloned dataset (see the previous step)
 export DATA_PATH="TODO"
 export RESULT_PATH="$(pwd)/results"
