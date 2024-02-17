@@ -233,12 +233,12 @@ def main():
     axes[0].set_xticks([0.7, 1.7], ["UL", "DL"])
     axes[0].set_ylabel("OWD (ms)")
 
-    stl_stats = [replace_label(s) for s in bxp_stl if s["label"].startswith("rate")]
-    ter_stats = [replace_label(s) for s in bxp_ter if s["label"].startswith("rate")]
+    stl_stats = [replace_label(s) for s in bxp_stl if s["label"].startswith("tput_total_mbps")]
+    ter_stats = [replace_label(s) for s in bxp_ter if s["label"].startswith("tput_total_mbps")]
     axes[1].bxp(stl_stats, **stl_props)
     axes[1].bxp(ter_stats, **ter_props)
     axes[1].set_xticks([0.7, 1.7], ["UL", "DL"])
-    axes[1].set_ylabel("Bitrate (Mbps)")
+    axes[1].set_ylabel("Throughput (Mbps)")
 
     stl_stats = [replace_label(s) for s in bxp_stl if s["label"].startswith("fps")]
     ter_stats = [replace_label(s) for s in bxp_ter if s["label"].startswith("fps")]

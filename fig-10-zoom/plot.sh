@@ -1,13 +1,16 @@
 #!/usr/bin/env sh
 
+if [ -z "$DATA_PATH" ] || [ -z "$RESULT_PATH" ]; then echo "DATA_PATH and RESULT_PATH need to be set"
+    exit 1
+fi
+RES="$RESULT_PATH/zoom"
+mkdir -p "$RES"
+
 set -xeu
 
 cd "$(dirname -- "$0")"
 
 DATA="$DATA_PATH/zoom"
-RES="result"
-
-mkdir -p "$RES"
 
 echo "Plotting Fig 10 Zoom"
 python plot_xtime_figure.py \

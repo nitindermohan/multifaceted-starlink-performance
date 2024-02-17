@@ -17,4 +17,4 @@ Process the files using our utility script: `bash process_pcaps.sh`
 [0] Oliver Michel, Satadal Sengupta, Hyojoon Kim, Ravi Netravali, and Jennifer Rexford. 2022. Enabling passive measurement of zoom performance in production networks. In Proceedings of the 22nd ACM Internet Measurement Conference (IMC '22). Association for Computing Machinery, New York, NY, USA, 244–260. https://doi.org/10.1145/3517745.3561414
 
 ## Recreate the Plots
-Run `bash plot.sh` to create the figure.
+Set the environment variables `DATA_PATH` and `RESULT_PATH`. Run `bash plot.sh` to create the figure.
