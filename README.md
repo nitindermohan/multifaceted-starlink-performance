@@ -47,7 +47,7 @@ export RSYNC_PASSWORD="TODO: get from mediaTUM"
 rsync -Pr rsync://m1734703@dataserv.ub.tum.de/m1734703 "$DATA_PATH" --exclude={'*mkv','dump.pcapng','dump_for_ip.pcapng'}
 
 # Unzip the RIPE Atlas measurement artifacts
-unzip atlas/ripe_atlas_repr/*zip -d atlas/ripe_atlas_repr
+unzip 'atlas/ripe_atlas_repr/*zip' -d atlas/ripe_atlas_repr
 
 $ tree -L 2 "$DATA_PATH"
 /multifaceted-dataset/
@@ -67,10 +67,10 @@ All plots can be created with `./plot_all.sh`. Make sure to properly configure `
 export DATA_PATH="$(pwd)/multifaceted-dataset"
 export RESULT_PATH="$(pwd)/results"
 
-# RIPE Atlas plots: Figures 3, 12, 13, 14, 15, 22
+# RIPE Atlas plots: Figures 3, 12, 13, 14, 15, 22, 23
 jupyter nbconvert --to=html --output-dir="$RESULT_PATH" --execute ripe_atlas_figures/ripe_atlas_repr.ipynb
 
-# MLab plots: Figures 5, 6, 7, 8, 9, 17, 19, 20, 21
+# MLab plots: Figures 1, 5, 6, 7, 8, 9, 17, 18, 19, 20, 21
 jupyter nbconvert --to=html --output-dir="$RESULT_PATH" --execute mlab_figures/mlab_concise.ipynb
 
 # Zoom plots: Figure 10
