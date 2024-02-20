@@ -38,52 +38,49 @@ pip install -r requirements.txt
 
 To plot Figure 16, you need to have `unzstd`, `jq`, and `sqlite3` available in your `$PATH`.
 
-The dataset contains both raw data and processed artifacts. To only download the data required for plotting, you may use the following command.
+The dataset contains both raw data and processed artifacts. To download the data required for plotting, you may use the following command. Please look up the password for rsync access at [mediaTUM](https://mediatum.ub.tum.de/1734703).
 
 ``` sh
 export DATA_PATH="$(pwd)/multifaceted-dataset"
-# TODO: will follow when dataset is public
-rsync ... "$DATA_PATH/"
+export RSYNC_PASSWORD="TODO: get from mediaTUM"
+# You may exclude the large cloud gaming packet and video captures that are not required for recreating our plots
+rsync -Pr rsync://m1734703@dataserv.ub.tum.de/m1734703 "$DATA_PATH" --exclude={'*mkv','dump.pcapng','dump_for_ip.pcapng'}
+
+# Unzip the RIPE Atlas measurement artifacts
+unzip atlas/ripe_atlas_repr/*zip -d atlas/ripe_atlas_repr
 
 $ tree -L 2 "$DATA_PATH"
 /multifaceted-dataset/
 .
 ├── atlas
-├── atlas.sha512
 ├── controlled
-├── controlled.sha512
 ├── gaming
-├── gaming.sha512
 ├── mlab
-├── mlab.sha512
-├── README.md
-├── README.md.sha512
 ├── zoom
-└── zoom.sha512
+├── checksums.sha512
+└── README.md
 ```
 
 All plots can be created with `./plot_all.sh`. Make sure to properly configure `DATA_PATH` and `RESULT_PATH`.
 ``` sh
-#
 # Remember that envvar DATA_PATH needs to point to the cloned dataset (see the previous step)
-export DATA_PATH="TODO"
+export DATA_PATH="$(pwd)/multifaceted-dataset"
 export RESULT_PATH="$(pwd)/results"
 
-# RIPE Atlas plots
+# RIPE Atlas plots: Figures 3, 12, 13, 14, 15, 22
 jupyter nbconvert --to=html --output-dir="$RESULT_PATH" --execute ripe_atlas_figures/ripe_atlas_repr.ipynb
 
-# MLab plots
+# MLab plots: Figures 5, 6, 7, 8, 9, 17, 19, 20, 21
 jupyter nbconvert --to=html --output-dir="$RESULT_PATH" --execute mlab_figures/mlab_concise.ipynb
 
-# Zoom plots
+# Zoom plots: Figure 10
 bash zoom/plot.sh
 
-# Cloud gaming plots
+# Cloud gaming plots: Figure 11
 bash gaming/plot.sh
 
-# Controlled experiments (Figure 16)
+# Controlled experiments: Figure 16
 bash controlled/16a/generate_fig_16a.sh   # Generate Figure 16a
 bash controlled/16b/generate_fig_16b.sh   # Generate Figure 16b
 bash controlled/16c/generate_fig_16c.sh   # Generate Figure 16c
 ```
-
