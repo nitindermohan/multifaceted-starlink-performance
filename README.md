@@ -1,5 +1,7 @@
 [![](https://img.shields.io/badge/WWW'24-Paper-blue)]()
 
+<img width="80em" src="artifacts_available.jpg" align="right" />
+
 # A Multifaceted Look at Starlink Performance
 
 This is the artifacts repository of the Web Conference (WWW) 2024 paper: A Multifaceted Look at Starlink Performance
