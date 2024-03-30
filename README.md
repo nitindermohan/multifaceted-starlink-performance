@@ -1,6 +1,6 @@
-[![](https://img.shields.io/badge/WWW'24-Paper-blue)]()
+[![](https://img.shields.io/badge/WWW'24-Paper-blue)](https://doi.org/10.1145/3589334.3645328)
 
-<img width="80em" src="artifacts_available.jpg" align="right" />
+<img width="50em" src="artifacts_available.jpg" align="right" />
 
 # A Multifaceted Look at Starlink Performance
 
